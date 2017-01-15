@@ -15,3 +15,13 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore environment variables
+.env
+
+# Ignore database configuration
+/config/database.yml
+
+# Ignore code analyses tool reports
+/traceroute-0.5.0
+traceroute_report.txt
