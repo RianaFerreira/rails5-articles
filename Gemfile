@@ -30,12 +30,15 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+
+  # Testing framework https://github.com/rspec/rspec-rails
+  gem 'rspec-rails'
+  # Identify problematic DB queries https://github.com/flyerhzm/bullet
+  gem 'bullet'
+  # Find unused routes https://github.com/amatsuda/traceroute
   gem 'traceroute', '~> 0.5.0'
 end
 
@@ -48,6 +51,17 @@ group :development do
   # Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # Check for security vulnerabilities https://github.com/presidentbeef/brakeman
+  gem 'brakeman', require: false
+  # Exception reporting for application https://github.com/bugsnag/bugsnag-ruby
+  # See dashboard: https://app.bugsnag.com/private-22/rails/errors?openModal=project-access
+  gem 'bugsnag'
+end
+
+group :test do
+  # Report on test coverage https://github.com/colszowka/simplecov
+  gem 'simplecov', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

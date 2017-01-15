@@ -15,10 +15,42 @@ Things you may want to cover:
 
 ## Setup
 ```shell
+$ git clone git@github.com:RianaFerreira/rails5-articles.git
+$ cd rails5-articles
 $ bin/setup
 ```
 
 ## System dependencies
+* [Bugsnag](https://app.bugsnag.com/private-22/rails/errors?openModal=project-access) exception reporting
+
+## Analysis Tools
+* [brakeman](https://github.com/presidentbeef/brakeman) find security vulnerabilities
+```shell
+$ brakeman
+```
+* []()
+```shell
+$
+```
+* []()
+```shell
+$
+```
+
+## Testing
+Rspec has been used to generate test coverage for the code base.
+```shell
+$
+```
+Bullet and SimpleCov reports are compiled while the test suite is running.
+* [Bullet](https://github.com/flyerhzm/bullet) identifies all N+1 queries and unused eager loaded associations
+```shell
+$ open /log/bullet.log
+```
+* [SimpleCov](https://github.com/colszowka/simplecov) identifies the code coverage value and highlights areas that need tests
+```shell
+$ open /coverage/index.html
+```
 
 * Configuration
 
