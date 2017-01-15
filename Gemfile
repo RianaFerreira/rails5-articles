@@ -56,6 +56,11 @@ group :development do
 
   # Check for security vulnerabilities https://github.com/presidentbeef/brakeman
   gem 'brakeman', require: false
+  # Ruby static code analysis https://github.com/bbatsov/rubocop
+  gem 'rubocop', require: false
+  # Ruby code quality analysis https://github.com/whitesmith/rubycritic
+  gem 'rubycritic', require: false
+
 end
 
 group :test do
