@@ -7,9 +7,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+## Prerequisites
+* Ruby 2.3.3
+* Rails 5.0.1
+* Postgresql >= 9.4
+*
 
-* System dependencies
+## Setup
+```shell
+$ bin/setup
+```
+
+## System dependencies
 
 * Configuration
 
