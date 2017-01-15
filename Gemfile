@@ -30,12 +30,14 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Exception reporting for application https://github.com/bugsnag/bugsnag-ruby
+# See dashboard: https://app.bugsnag.com/private-22/rails/errors?openModal=project-access
+gem 'bugsnag'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 
-  # Testing framework https://github.com/rspec/rspec-rails
-  gem 'rspec-rails'
   # Identify problematic DB queries https://github.com/flyerhzm/bullet
   gem 'bullet'
   # Find unused routes https://github.com/amatsuda/traceroute
@@ -54,12 +56,11 @@ group :development do
 
   # Check for security vulnerabilities https://github.com/presidentbeef/brakeman
   gem 'brakeman', require: false
-  # Exception reporting for application https://github.com/bugsnag/bugsnag-ruby
-  # See dashboard: https://app.bugsnag.com/private-22/rails/errors?openModal=project-access
-  gem 'bugsnag'
 end
 
 group :test do
+  # Testing framework https://github.com/rspec/rspec-rails
+  gem 'rspec-rails'
   # Report on test coverage https://github.com/colszowka/simplecov
   gem 'simplecov', require: false
 end
