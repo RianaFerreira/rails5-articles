@@ -1,4 +1,6 @@
-# README
+[![Build Status](https://travis-ci.org/RianaFerreira/rails5-articles.svg?branch=master)](https://travis-ci.org/RianaFerreira/rails5-articles)
+
+# Rails5 Blog
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
