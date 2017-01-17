@@ -32,11 +32,18 @@ chdir APP_ROOT do
   end
 
   puts "\n== Preparing database =="
+  system! 'pg_ctl -D /Users/fuzzyri/Library/Application\ Support/Postgres/var-9.5 stop'
+  system! 'pg_ctl -D /Users/fuzzyri/Library/Application\ Support/Postgres/var-9.5 start'
   system! 'bin/rails db:create'
   system! 'bin/rails db:migrate'
 
   puts "\n== Removing old logs and tempfiles =="
   system! 'bin/rails log:clear tmp:clear'
+
+  puts "\n== Adding static analysis report directory"
+  unless File.directory?('analysis')
+    mkdir analysis
+  end
 
   puts "\n== Restarting application server =="
   system! 'bin/rails restart'

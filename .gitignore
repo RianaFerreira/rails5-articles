@@ -23,9 +23,11 @@
 /config/database.yml
 
 # Ignore code analyses tool reports
+/analysis
 /coverage
-/rubocop
 /traceroute-0.5.0
+rails_best_practices_output.html
+bundler_audit_output_file.txt
 
 # Ignore gemset version manager files
 .rvmrc
